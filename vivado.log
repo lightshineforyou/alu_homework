@@ -1,0 +1,70 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sat Mar  1 06:12:55 2025
+# Process ID         : 13404
+# Current directory  : C:/Users/legion/Desktop/alu
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent16948 C:\Users\legion\Desktop\alu\alu.xpr
+# Log file           : C:/Users/legion/Desktop/alu/vivado.log
+# Journal file       : C:/Users/legion/Desktop/alu\vivado.jou
+# Running On         : LAPTOP-MUII7O6N
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 22631
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i5-13500H
+# CPU Frequency      : 3187 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 16
+# Host memory        : 16961 MB
+# Swap memory        : 107152 MB
+# Total Virtual      : 124114 MB
+# Available Virtual  : 109931 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/legion/Desktop/alu/alu.xpr
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/legion/Desktop/alu/alu.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/vivado/Vivado/2024.2/data/ip'.
+update_compile_order -fileset sources_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/legion/Desktop/alu/alu.runs/synth_1
+
+launch_runs synth_1 -jobs 16
+[Sat Mar  1 06:13:34 2025] Launched synth_1...
+Run output will be captured here: C:/Users/legion/Desktop/alu/alu.runs/synth_1/runme.log
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+boost::filesystem::remove: 另一个程序正在使用此文件，进程无法访问。: "C:/Users/legion/Desktop/alu/alu.sim/sim_1/behav/xsim/simulate.log"
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/legion/Desktop/alu/alu.runs/synth_1
+
+launch_runs impl_1 -jobs 16
+[Sat Mar  1 06:14:55 2025] Launched synth_1...
+Run output will be captured here: C:/Users/legion/Desktop/alu/alu.runs/synth_1/runme.log
+[Sat Mar  1 06:14:55 2025] Launched impl_1...
+Run output will be captured here: C:/Users/legion/Desktop/alu/alu.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/legion/Desktop/alu/alu.runs/synth_1
+
+launch_runs synth_1 -jobs 16
+[Sat Mar  1 06:15:15 2025] Launched synth_1...
+Run output will be captured here: C:/Users/legion/Desktop/alu/alu.runs/synth_1/runme.log
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+boost::filesystem::remove: 另一个程序正在使用此文件，进程无法访问。: "C:/Users/legion/Desktop/alu/alu.sim/sim_1/behav/xsim/simulate.log"
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+boost::filesystem::remove: 另一个程序正在使用此文件，进程无法访问。: "C:/Users/legion/Desktop/alu/alu.sim/sim_1/behav/xsim/simulate.log"

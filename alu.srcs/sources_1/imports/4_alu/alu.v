@@ -1,18 +1,14 @@
 `timescale 1ns / 1ps
-//*************************************************************************
-//   > 文件名: alu.v
-//   > 描述  ：ALU模块，可做12种操作
-//   > 作者  : LOONGSON
-//   > 日期  : 2016-04-14
-//*************************************************************************
+`include "../2_multiply/multiply.v"
+`include "../32bit_adder/32bit_adder.v"
+
 module alu(
     input  clk,
     input  [12:0] alu_control,  // ALU控制信号
     input  [31:0] alu_src1,     // ALU操作数1,为补码
     input  [31:0] alu_src2,     // ALU操作数2，为补码
     output [31:0] alu_result    // ALU结果
-    );
-
+);
 
     // ALU控制信号，独热码
     wire alu_mul;   //乘法操作
@@ -87,27 +83,17 @@ module alu(
         .mult_end(mult_end)    // 乘法结束信号
     );
 
-//-----{加法器}begin
-//add,sub,slt,sltu均使用该模块
-    wire [31:0] adder_operand1;
-    wire [31:0] adder_operand2;
-    wire        adder_cin     ;
-    wire [31:0] adder_result  ;
-    wire        adder_cout    ;
-    assign adder_operand1 = alu_src1; 
-    assign adder_operand2 = alu_add ? alu_src2 : ~alu_src2; 
-    assign adder_cin      = ~alu_add; //减法需要cin 
-    adder adder_module(
-    .operand1(adder_operand1),
-    .operand2(adder_operand2),
-    .cin     (adder_cin     ),
-    .result  (adder_result  ),
-    .cout    (adder_cout    )
+    // 调用 32 位加法器
+    wire CO;  // 进位输出
+    CLA_Add_32bit cla_adder (
+        .A(alu_src1),
+        .B(alu_src2),
+        .CI_0(alu_add ? 1'b0 : 1'b1),  // 加法或减法选择
+        .S(add_sub_result),
+        .CO(CO)
     );
 
-    //加减结果
-    assign add_sub_result = adder_result;
-
+    // slt 结果
     //slt结果
     //adder_src1[31] adder_src2[31] adder_result[31]
     //       0             1           X(0或1)       "正-负"，显然小于不成立
@@ -117,17 +103,17 @@ module alu(
     //       1             1             0           相减为正，说明不小于
     //       1             0           X(0或1)       "负-正"，显然小于成立
     assign slt_result[31:1] = 31'd0;
-    assign slt_result[0]    = (alu_src1[31] & ~alu_src2[31]) | (~(alu_src1[31]^alu_src2[31]) & adder_result[31]);
+    assign slt_result[0]    = (alu_src1[31] & ~alu_src2[31]) | (~(alu_src1[31]^alu_src2[31]) & add_sub_result[31]);
 
-    //sltu结果
+    // sltu 结果
     //对于32位无符号数比较，相当于33位有符号数（{1'b0,src1}和{1'b0,src2}）的比较，最高位0为符号位
     //故，可以用33位加法器来比较大小，需要对{1'b0,src2}取反,即需要{1'b0,src1}+{1'b1,~src2}+cin
     //但此处用的为32位加法器，只做了运算:                             src1   +    ~src2   +cin
     //32位加法的结果为{adder_cout,adder_result},则33位加法结果应该为{adder_cout+1'b1,adder_result}
     //对比slt结果注释，知道，此时判断大小属于第二三种情况，即源操作数1符号位为0，源操作数2符号位为0
     //结果的符号位为1，说明小于，即adder_cout+1'b1为2'b01，即adder_cout为0
-    assign sltu_result = {31'd0, ~adder_cout};
-//-----{加法器}end
+    assign sltu_result = {31'd0, ~CO};
+    //-----{加法器}end
 
 //-----{移位器}begin
     // 移位分三步进行，
@@ -181,19 +167,21 @@ module alu(
     assign sra_result = shf[4] ? {{16{sra_step2[31]}}, sra_step2[31:16]} : sra_step2;    // 若shf[4]="1",第二次移位结果右移16位,高位补符号位
 //-----{移位器}end
 
+    
+
     // 选择相应结果输出
-    assign alu_result = (alu_mul&mult_end)? mul_result[31:0] : 
-                        (alu_add|alu_sub) ? add_sub_result[31:0] : 
-                        alu_slt           ? slt_result :
-                        alu_sltu          ? sltu_result :
-                        alu_and           ? and_result :
-                        alu_nor           ? nor_result :
-                        alu_or            ? or_result  :
-                        alu_xor           ? xor_result :
-                        alu_sll           ? sll_result :
-                        alu_srl           ? srl_result :
-                        alu_sra           ? sra_result :
-                        alu_lui           ? lui_result :
+    assign alu_result = (alu_mul & mult_end) ? mul_result[31:0] : 
+                        (alu_add | alu_sub) ? add_sub_result[31:0] : 
+                        alu_slt             ? slt_result :
+                        alu_sltu            ? sltu_result :
+                        alu_and             ? and_result :
+                        alu_nor             ? nor_result :
+                        alu_or              ? or_result  :
+                        alu_xor             ? xor_result :
+                        alu_sll             ? sll_result :
+                        alu_srl             ? srl_result :
+                        alu_sra             ? sra_result :
+                        alu_lui             ? lui_result :
                         32'd0;
 //    always @(*) begin
 //    if (alu_mul & mult_end) 

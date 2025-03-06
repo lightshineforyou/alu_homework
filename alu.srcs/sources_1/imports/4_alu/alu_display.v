@@ -33,7 +33,7 @@ module alu_display(
     inout ct_int,
     inout ct_sda,
     output ct_scl,
-    output ct_rstn
+    output ct_rstn,
 
     // 显示输出
     output reg        display_valid,
@@ -55,7 +55,7 @@ module alu_display(
         .alu_control(alu_control),
         .alu_src1   (alu_src1),
         .alu_src2   (alu_src2),
-        .alu_result (alu_result)，
+        .alu_result (alu_result),
         .mul_result (mul_result),   // 连接新增输出
         .quotient   (quotient)      // 连接新增输出
     );

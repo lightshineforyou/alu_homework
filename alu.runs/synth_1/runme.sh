@@ -12,9 +12,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=E:/vivado/Vitis/2024.2/bin;E:/vivado/Vivado/2024.2/ids_lite/ISE/bin/nt64;E:/vivado/Vivado/2024.2/ids_lite/ISE/lib/nt64:E:/vivado/Vivado/2024.2/bin
+  PATH=E:/Xilinx/Vitis/2024.2/bin;E:/Xilinx/Vivado/2024.2/ids_lite/ISE/bin/nt64;E:/Xilinx/Vivado/2024.2/ids_lite/ISE/lib/nt64:E:/Xilinx/Vivado/2024.2/bin
 else
-  PATH=E:/vivado/Vitis/2024.2/bin;E:/vivado/Vivado/2024.2/ids_lite/ISE/bin/nt64;E:/vivado/Vivado/2024.2/ids_lite/ISE/lib/nt64:E:/vivado/Vivado/2024.2/bin:$PATH
+  PATH=E:/Xilinx/Vitis/2024.2/bin;E:/Xilinx/Vivado/2024.2/ids_lite/ISE/bin/nt64;E:/Xilinx/Vivado/2024.2/ids_lite/ISE/lib/nt64:E:/Xilinx/Vivado/2024.2/bin:$PATH
 fi
 export PATH
 
@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/legion/Desktop/alu/alu.runs/synth_1'
+HD_PWD='E:/Learing Doc/github/alu_homework/alu.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,4 +41,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log alu_display.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source alu_display.tcl
+EAStep vivado -log adder.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source adder.tcl

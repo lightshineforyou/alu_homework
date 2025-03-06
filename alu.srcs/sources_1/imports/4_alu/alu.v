@@ -4,11 +4,19 @@
 `include "../divider/divider.v"
 
 module alu(
+    // 新增输出
+    output [63:0] mul_result,  // 完整64位乘法结果
+    output [31:0] quotient,    // 除法商
+    // 原有端口保持不变
+    
     input  clk,
+    input  resetn,  // 新增复位信号
     input  [14:0] alu_control,  // ALU控制信号
     input  [31:0] alu_src1,     // ALU操作数1,为补码
     input  [31:0] alu_src2,     // ALU操作数2，为补码
-    output [31:0] alu_result    // ALU结果
+    output [31:0] alu_result,    // ALU结果
+    output [63:0] mul_result,  // 新增输出
+    output [31:0] quotient     // 新增输出
 );
     // ALU控制信号，独热码
     wire alu_div;   //除法操作

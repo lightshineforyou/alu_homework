@@ -1,29 +1,39 @@
 #-----------------------------------------------------------
-# Vivado v2024.1 (64-bit)
-# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
-# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
-# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Thu Mar  6 17:19:10 2025
-# Process ID: 20616
-# Current directory: C:/Users/91629/Desktop/alu_homework
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22336 C:\Users\91629\Desktop\alu_homework\alu.xpr
-# Log file: C:/Users/91629/Desktop/alu_homework/vivado.log
-# Journal file: C:/Users/91629/Desktop/alu_homework\vivado.jou
-# Running On        :wangzhangzhuo
-# Platform          :Windows Server 2016 or Windows 10
-# Operating System  :22631
-# Processor Detail  :AMD Ryzen 7 7840H w/Radeon 780M Graphics
-# CPU Frequency     :3793 MHz
-# CPU Physical cores:8
-# CPU Logical cores :16
-# Host memory       :16334 MB
-# Swap memory       :11274 MB
-# Total Virtual     :27609 MB
-# Available Virtual :13055 MB
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Fri Mar  7 00:38:00 2025
+# Process ID         : 20284
+# Current directory  : E:/Learing Doc/github/alu_homework
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent8120 E:\Learing Doc\github\alu_homework\alu.xpr
+# Log file           : E:/Learing Doc/github/alu_homework/vivado.log
+# Journal file       : E:/Learing Doc/github/alu_homework\vivado.jou
+# Running On         : LAPTOP-B446I18T
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i9-12900H
+# CPU Frequency      : 2918 MHz
+# CPU Physical cores : 14
+# CPU Logical cores  : 20
+# Host memory        : 16890 MB
+# Swap memory        : 10737 MB
+# Total Virtual      : 27628 MB
+# Available Virtual  : 8296 MB
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/91629/Desktop/alu_homework/alu.xpr
+open_project {E:/Learing Doc/github/alu_homework/alu.xpr}
 update_compile_order -fileset sources_1
-save_project_as project_3 C:/Users/91629/Desktop/ALU2/project_3 -force
-update_compile_order -fileset sources_1
-launch_simulation
+synth_design -top adder -part xc7a200tfbg676-2 -lint 
+synth_design -top adder -part xc7a200tfbg676-2 -lint 
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+launch_runs impl_1 -jobs 10
+wait_on_run impl_1
+open_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1

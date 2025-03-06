@@ -1,8 +1,5 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
-"../../../../alu.srcs/sources_1/imports/4_alu/adder.v" \
-"../../../../alu.srcs/sources_1/imports/4_alu/alu.v" \
-"../../../../alu.srcs/sources_1/imports/2_multiply/multiply.v" \
 "../../../../alu.srcs/sim_1/imports/4_alu/tb.v" \
 
 # compile glbl module

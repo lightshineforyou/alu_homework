@@ -1,24 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a200tfbg676-2" LaunchTime="1740780915">
-  <File Type="PA-TCL" Name="alu_display.tcl"/>
-  <File Type="REPORTS-TCL" Name="alu_display_reports.tcl"/>
-  <File Type="RDS-RDS" Name="alu_display.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="alu_display_drc_synth.rpt"/>
-  <File Type="RDS-UTIL" Name="alu_display_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="alu_display_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="alu_display.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="alu_display_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="alu_display_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a200tfbg676-2" LaunchTime="1741279296">
+  <File Type="PA-TCL" Name="adder.tcl"/>
+  <File Type="REPORTS-TCL" Name="adder_reports.tcl"/>
+  <File Type="RDS-RDS" Name="adder.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="adder_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="adder_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="adder_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="adder.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="adder_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="adder_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/imports/新建文件夹/lcd_module.dcp">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../本科资料/大三作业/计组实验/新建文件夹/lcd_module.dcp"/>
-        <Attr Name="ImportTime" Val="1625895454"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/imports/4_alu/adder.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../本科资料/大三作业/计组实验/新建文件夹/4_alu/adder.v"/>
@@ -28,17 +20,9 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/4_alu/alu.v">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../本科资料/大三作业/计组实验/新建文件夹/4_alu/alu.v"/>
-        <Attr Name="ImportTime" Val="1625897773"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/imports/2_multiply/multiply.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../本科资料/大三作业/计组实验/新建文件夹/2_multiply/multiply.v"/>
         <Attr Name="ImportTime" Val="1625897768"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -46,8 +30,28 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/imports/4_alu/alu.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../本科资料/大三作业/计组实验/新建文件夹/4_alu/alu.v"/>
+        <Attr Name="ImportTime" Val="1625897773"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/新建文件夹/lcd_module.dcp">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../本科资料/大三作业/计组实验/新建文件夹/lcd_module.dcp"/>
+        <Attr Name="ImportTime" Val="1625895454"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/4_alu/alu_display.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../本科资料/大三作业/计组实验/新建文件夹/4_alu/alu_display.v"/>
         <Attr Name="ImportTime" Val="1625897774"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -57,7 +61,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="alu_display"/>
+      <Option Name="TopModule" Val="adder"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>

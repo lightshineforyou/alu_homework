@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/legion/Desktop/alu/alu.runs/synth_1/alu_display.tcl"
+  variable script "E:/Learing Doc/github/alu_homework/alu.runs/synth_1/adder.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,29 +56,25 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 4
+set_param synth.incrementalSynthesisCache {E:/Learing Doc/github/alu_homework/.Xil/Vivado-20284-LAPTOP-B446I18T/incrSyn}
+set_param checkpoint.writeSynthRtdsInDcp 1
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a200tfbg676-2
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/legion/Desktop/alu/alu.cache/wt [current_project]
-set_property parent.project_path C:/Users/legion/Desktop/alu/alu.xpr [current_project]
+set_property webtalk.parent_dir {E:/Learing Doc/github/alu_homework/alu.cache/wt} [current_project]
+set_property parent.project_path {E:/Learing Doc/github/alu_homework/alu.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/legion/Desktop/alu/alu.cache/ip [current_project]
+set_property ip_output_repo {e:/Learing Doc/github/alu_homework/alu.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-add_files -quiet C:/Users/legion/Desktop/alu/alu.srcs/sources_1/imports/新建文件夹/lcd_module.dcp
-set_property used_in_implementation false [get_files C:/Users/legion/Desktop/alu/alu.srcs/sources_1/imports/新建文件夹/lcd_module.dcp]
-read_verilog -library xil_defaultlib {
-  C:/Users/legion/Desktop/alu/alu.srcs/sources_1/imports/4_alu/adder.v
-  C:/Users/legion/Desktop/alu/alu.srcs/sources_1/imports/4_alu/alu.v
-  C:/Users/legion/Desktop/alu/alu.srcs/sources_1/imports/2_multiply/multiply.v
-  C:/Users/legion/Desktop/alu/alu.srcs/sources_1/imports/4_alu/alu_display.v
-}
+read_verilog -library xil_defaultlib {{E:/Learing Doc/github/alu_homework/alu.srcs/sources_1/imports/4_alu/adder.v}}
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -88,14 +84,14 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/legion/Desktop/alu/alu.srcs/constrs_1/imports/4_alu/alu.xdc
-set_property used_in_implementation false [get_files C:/Users/legion/Desktop/alu/alu.srcs/constrs_1/imports/4_alu/alu.xdc]
+read_xdc {{E:/Learing Doc/github/alu_homework/alu.srcs/constrs_1/imports/4_alu/alu.xdc}}
+set_property used_in_implementation false [get_files {{E:/Learing Doc/github/alu_homework/alu.srcs/constrs_1/imports/4_alu/alu.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top alu_display -part xc7a200tfbg676-2
+synth_design -top adder -part xc7a200tfbg676-2
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
@@ -105,10 +101,10 @@ if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
 OPTRACE "write_checkpoint" START { CHECKPOINT }
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef alu_display.dcp
+write_checkpoint -force -noxdef adder.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-generate_parallel_reports -reports { "report_utilization -file alu_display_utilization_synth.rpt -pb alu_display_utilization_synth.pb"  } 
+generate_parallel_reports -reports { "report_utilization -file adder_utilization_synth.rpt -pb adder_utilization_synth.pb"  } 
 OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

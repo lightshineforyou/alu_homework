@@ -9,9 +9,9 @@ var WshShell = new ActiveXObject( "WScript.Shell" );
 var ProcEnv = WshShell.Environment( "Process" );
 var PathVal = ProcEnv("PATH");
 if ( PathVal.length == 0 ) {
-  PathVal = "E:/vivado/Vitis/2024.2/bin;E:/vivado/Vivado/2024.2/ids_lite/ISE/bin/nt64;E:/vivado/Vivado/2024.2/ids_lite/ISE/lib/nt64;E:/vivado/Vivado/2024.2/bin;";
+  PathVal = "E:/Xilinx/Vitis/2024.2/bin;E:/Xilinx/Vivado/2024.2/ids_lite/ISE/bin/nt64;E:/Xilinx/Vivado/2024.2/ids_lite/ISE/lib/nt64;E:/Xilinx/Vivado/2024.2/bin;";
 } else {
-  PathVal = "E:/vivado/Vitis/2024.2/bin;E:/vivado/Vivado/2024.2/ids_lite/ISE/bin/nt64;E:/vivado/Vivado/2024.2/ids_lite/ISE/lib/nt64;E:/vivado/Vivado/2024.2/bin;" + PathVal;
+  PathVal = "E:/Xilinx/Vitis/2024.2/bin;E:/Xilinx/Vivado/2024.2/ids_lite/ISE/bin/nt64;E:/Xilinx/Vivado/2024.2/ids_lite/ISE/lib/nt64;E:/Xilinx/Vivado/2024.2/bin;" + PathVal;
 }
 
 ProcEnv("PATH") = PathVal;
@@ -24,7 +24,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log alu_display.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source alu_display.tcl" );
+         "-log adder.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source adder.tcl" );
 
 
 

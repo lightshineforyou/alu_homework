@@ -1,16 +1,17 @@
 `timescale 1ns / 1ps
 `include "../2_multiply/multiply.v"
 `include "../32bit_adder/32bit_adder.v"
+`include "../divider/divider.v"
 
 module alu(
     input  clk,
-    input  [12:0] alu_control,  // ALU控制信号
+    input  [14:0] alu_control,  // ALU控制信号
     input  [31:0] alu_src1,     // ALU操作数1,为补码
     input  [31:0] alu_src2,     // ALU操作数2，为补码
     output [31:0] alu_result    // ALU结果
 );
-
     // ALU控制信号，独热码
+    wire alu_div;   //除法操作
     wire alu_mul;   //乘法操作
     wire alu_add;   //加法操作
     wire alu_sub;   //减法操作
@@ -24,22 +25,8 @@ module alu(
     wire alu_srl;   //逻辑右移
     wire alu_sra;   //算术右移
     wire alu_lui;   //高位加载
-    /*显示屏上输入规则对应表
-    alu_lui=2^0=1,1转16进制为0001
-    alu_sra=2^1=2
-    alu_srl=2^2=4，
-    alu_sll=2^3=8，
-    alu_xor=2^4=16，
-    alu_or =2^5=32
-    alu_nor=2^6=64
-    alu_and=2^7=128
-    alu_sltu=2^8=256
-    alu_slt =2^9=512
-    alu_sub =2^10=1024
-    alu_add =2^11=2048
-    alu_mul =2^12=4096
-    在将对应数转成16进制即可
-    */
+
+    assign alu_div  = alu_control[13];
     assign alu_mul  = alu_control[12];
     assign alu_add  = alu_control[11];
     assign alu_sub  = alu_control[10];
@@ -54,6 +41,7 @@ module alu(
     assign alu_sra  = alu_control[ 1];
     assign alu_lui  = alu_control[ 0];
     
+    wire [31:0] div_result;
     wire [63:0] mul_result;
     wire [31:0] add_sub_result;
     wire [31:0] slt_result;
@@ -83,6 +71,27 @@ module alu(
         .mult_end(mult_end)    // 乘法结束信号
     );
 
+    // 除法启动信号
+    reg div_start;
+    always @(posedge clk) begin
+        div_start <= alu_div;  // 当 alu_div 为高电平时启动除法
+    end
+
+    // 实例化除法模块
+    wire [31:0] quotient, remainder;
+    wire div_ready, div_error;
+    divider u_divider (
+        .clk(clk),
+        .resetn(resetn),
+        .div_start(div_start),
+        .dividend(alu_src1),
+        .divisor(alu_src2),
+        .quotient(quotient),
+        .remainder(remainder),
+        .div_ready(div_ready),
+        .div_error(div_error)
+    );
+
     // 调用 32 位加法器
     wire CO;  // 进位输出
     CLA_Add_32bit cla_adder (
@@ -94,80 +103,17 @@ module alu(
     );
 
     // slt 结果
-    //slt结果
-    //adder_src1[31] adder_src2[31] adder_result[31]
-    //       0             1           X(0或1)       "正-负"，显然小于不成立
-    //       0             0             1           相减为负，说明小于
-    //       0             0             0           相减为正，说明不小于
-    //       1             1             1           相减为负，说明小于
-    //       1             1             0           相减为正，说明不小于
-    //       1             0           X(0或1)       "负-正"，显然小于成立
     assign slt_result[31:1] = 31'd0;
     assign slt_result[0]    = (alu_src1[31] & ~alu_src2[31]) | (~(alu_src1[31]^alu_src2[31]) & add_sub_result[31]);
 
     // sltu 结果
-    //对于32位无符号数比较，相当于33位有符号数（{1'b0,src1}和{1'b0,src2}）的比较，最高位0为符号位
-    //故，可以用33位加法器来比较大小，需要对{1'b0,src2}取反,即需要{1'b0,src1}+{1'b1,~src2}+cin
-    //但此处用的为32位加法器，只做了运算:                             src1   +    ~src2   +cin
-    //32位加法的结果为{adder_cout,adder_result},则33位加法结果应该为{adder_cout+1'b1,adder_result}
-    //对比slt结果注释，知道，此时判断大小属于第二三种情况，即源操作数1符号位为0，源操作数2符号位为0
-    //结果的符号位为1，说明小于，即adder_cout+1'b1为2'b01，即adder_cout为0
     assign sltu_result = {31'd0, ~CO};
-    //-----{加法器}end
 
-//-----{移位器}begin
-    // 移位分三步进行，
-    // 第一步根据移位量低2位即[1:0]位做第一次移位，
-    // 第二步在第一次移位基础上根据移位量[3:2]位做第二次移位，
-    // 第三步在第二次移位基础上根据移位量[4]位做第三次移位。
-    wire [4:0] shf;
-    assign shf = alu_src1[4:0];
-    wire [1:0] shf_1_0;
-    wire [1:0] shf_3_2;
-    assign shf_1_0 = shf[1:0];
-    assign shf_3_2 = shf[3:2];
-    
-     // 逻辑左移
-    wire [31:0] sll_step1;
-    wire [31:0] sll_step2;
-    assign sll_step1 = {32{shf_1_0 == 2'b00}} & alu_src2                   // 若shf[1:0]="00",不移位
-                     | {32{shf_1_0 == 2'b01}} & {alu_src2[30:0], 1'd0}     // 若shf[1:0]="01",左移1位
-                     | {32{shf_1_0 == 2'b10}} & {alu_src2[29:0], 2'd0}     // 若shf[1:0]="10",左移2位
-                     | {32{shf_1_0 == 2'b11}} & {alu_src2[28:0], 3'd0};    // 若shf[1:0]="11",左移3位
-    assign sll_step2 = {32{shf_3_2 == 2'b00}} & sll_step1                  // 若shf[3:2]="00",不移位
-                     | {32{shf_3_2 == 2'b01}} & {sll_step1[27:0], 4'd0}    // 若shf[3:2]="01",第一次移位结果左移4位
-                     | {32{shf_3_2 == 2'b10}} & {sll_step1[23:0], 8'd0}    // 若shf[3:2]="10",第一次移位结果左移8位
-                     | {32{shf_3_2 == 2'b11}} & {sll_step1[19:0], 12'd0};  // 若shf[3:2]="11",第一次移位结果左移12位
-    assign sll_result = shf[4] ? {sll_step2[15:0], 16'd0} : sll_step2;     // 若shf[4]="1",第二次移位结果左移16位
-
-    // 逻辑右移
-    wire [31:0] srl_step1;
-    wire [31:0] srl_step2;
-    assign srl_step1 = {32{shf_1_0 == 2'b00}} & alu_src2                   // 若shf[1:0]="00",不移位
-                     | {32{shf_1_0 == 2'b01}} & {1'd0, alu_src2[31:1]}     // 若shf[1:0]="01",右移1位,高位补0
-                     | {32{shf_1_0 == 2'b10}} & {2'd0, alu_src2[31:2]}     // 若shf[1:0]="10",右移2位,高位补0
-                     | {32{shf_1_0 == 2'b11}} & {3'd0, alu_src2[31:3]};    // 若shf[1:0]="11",右移3位,高位补0
-    assign srl_step2 = {32{shf_3_2 == 2'b00}} & srl_step1                  // 若shf[3:2]="00",不移位
-                     | {32{shf_3_2 == 2'b01}} & {4'd0, srl_step1[31:4]}    // 若shf[3:2]="01",第一次移位结果右移4位,高位补0
-                     | {32{shf_3_2 == 2'b10}} & {8'd0, srl_step1[31:8]}    // 若shf[3:2]="10",第一次移位结果右移8位,高位补0
-                     | {32{shf_3_2 == 2'b11}} & {12'd0, srl_step1[31:12]}; // 若shf[3:2]="11",第一次移位结果右移12位,高位补0
-    assign srl_result = shf[4] ? {16'd0, srl_step2[31:16]} : srl_step2;    // 若shf[4]="1",第二次移位结果右移16位,高位补0
- 
-    // 算术右移
-    wire [31:0] sra_step1;
-    wire [31:0] sra_step2;
-    assign sra_step1 = {32{shf_1_0 == 2'b00}} & alu_src2                                 // 若shf[1:0]="00",不移位
-                     | {32{shf_1_0 == 2'b01}} & {alu_src2[31], alu_src2[31:1]}           // 若shf[1:0]="01",右移1位,高位补符号位
-                     | {32{shf_1_0 == 2'b10}} & {{2{alu_src2[31]}}, alu_src2[31:2]}      // 若shf[1:0]="10",右移2位,高位补符号位
-                     | {32{shf_1_0 == 2'b11}} & {{3{alu_src2[31]}}, alu_src2[31:3]};     // 若shf[1:0]="11",右移3位,高位补符号位
-    assign sra_step2 = {32{shf_3_2 == 2'b00}} & sra_step1                                // 若shf[3:2]="00",不移位
-                     | {32{shf_3_2 == 2'b01}} & {{4{sra_step1[31]}}, sra_step1[31:4]}    // 若shf[3:2]="01",第一次移位结果右移4位,高位补符号位
-                     | {32{shf_3_2 == 2'b10}} & {{8{sra_step1[31]}}, sra_step1[31:8]}    // 若shf[3:2]="10",第一次移位结果右移8位,高位补符号位
-                     | {32{shf_3_2 == 2'b11}} & {{12{sra_step1[31]}}, sra_step1[31:12]}; // 若shf[3:2]="11",第一次移位结果右移12位,高位补符号位
-    assign sra_result = shf[4] ? {{16{sra_step2[31]}}, sra_step2[31:16]} : sra_step2;    // 若shf[4]="1",第二次移位结果右移16位,高位补符号位
-//-----{移位器}end
-
-    
+    // 移位操作
+    wire [4:0] shf = alu_src1[4:0];
+    assign sll_result = alu_src2 << shf;
+    assign srl_result = alu_src2 >> shf;
+    assign sra_result = $signed(alu_src2) >>> shf;
 
     // 选择相应结果输出
     assign alu_result = (alu_mul & mult_end) ? mul_result[31:0] : 
@@ -182,12 +128,6 @@ module alu(
                         alu_srl             ? srl_result :
                         alu_sra             ? sra_result :
                         alu_lui             ? lui_result :
+                        alu_div             ? quotient :  // 除法结果
                         32'd0;
-//    always @(*) begin
-//    if (alu_mul & mult_end) 
-//        alu_mul_result = mul_result;
-//    else if(!alu_mul)
-//        alu_mul_result=0;
-//    end
-//   assign alu_mul_result = alu_mul&mult_end  ? mul_result :64'd0;
 endmodule

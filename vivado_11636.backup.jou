@@ -3,10 +3,10 @@
 # SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Thu Mar  6 17:19:10 2025
-# Process ID: 20616
+# Start of session at: Thu Mar  6 17:17:52 2025
+# Process ID: 11636
 # Current directory: C:/Users/91629/Desktop/alu_homework
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22336 C:\Users\91629\Desktop\alu_homework\alu.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5712 C:\Users\91629\Desktop\alu_homework\alu.xpr
 # Log file: C:/Users/91629/Desktop/alu_homework/vivado.log
 # Journal file: C:/Users/91629/Desktop/alu_homework\vivado.jou
 # Running On        :wangzhangzhuo
@@ -19,11 +19,6 @@
 # Host memory       :16334 MB
 # Swap memory       :11274 MB
 # Total Virtual     :27609 MB
-# Available Virtual :13055 MB
+# Available Virtual :13083 MB
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/91629/Desktop/alu_homework/alu.xpr
-update_compile_order -fileset sources_1
-save_project_as project_3 C:/Users/91629/Desktop/ALU2/project_3 -force
-update_compile_order -fileset sources_1
-launch_simulation

@@ -1,0 +1,10 @@
+-------------------------------------
+| Tool Version : Vivado v.2024.2
+| Date         : Sat Mar  8 17:37:32 2025
+| Host         : wangzhangzhuo
+| Design       : design_1
+| Device       : xc7a200t-fbg676-2--
+-------------------------------------
+
+For more information on clockInfo.txt clock routing debug file see https://support.xilinx.com/s/article/000035660?language=en_US
+

@@ -1,0 +1,24 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Tue Dec 10 16:25:27 2024
+| Host         : jthsdysh0 running 64-bit major release  (build 9200)
+| Command      : upgrade_project -migrate_output_products
+| Project_Path : C:/Users/Administrator/×ÀÃæ/1/32bit_ALU/32bit_ALU/32bit_ALU.xpr
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Project Status Summary
+
+1. Project IP Status
+--------------------
+This project contains 0 IP and 0 Block Designs.
+
+
+1.1 Project IP Instances
++--+-------------------------+-------------------------------------+-------------------------------------+
+| Instance | Status                  | Reason                              | Recommendation                      |
+| Name |                         |                                     |                                     |
++--+-------------------------+-------------------------------------+-------------------------------------+
+
+
+

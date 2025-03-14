@@ -30,7 +30,7 @@ output ct_rstn
  reg [31:0] In1;
  reg [31:0] In2;
  wire          CI;
- reg [2:0]  F;
+ reg [3:0]  F;
  reg [1:0] Dir;
  reg [4:0] Bite;
 
@@ -120,7 +120,7 @@ always @(posedge clk)
  begin
  if (!resetn)
  begin
-   F <= 3'd0;
+   F <= 4'd0;
  end
  else if (input_valid && input_sel==3'b010 )
  begin
@@ -211,35 +211,33 @@ always @(posedge clk)
    display_name <= "CO";
    display_value <= CO;
  end
-  6'd9 :
- begin
+ 6'd9 :
+begin
    display_valid <= 1'b1;
    display_name <= "SIGNED_CMP";
-   display_value <= (In1 < In2) ? 32'd1 : 32'd0;
- end
- 6'd10 :
- begin
+   F <= 3'd9; // 设置ALU的操作码为有符号比较
+   display_value <= Out; // 使用ALU的输出结果
+end
+6'd10 :
+begin
    display_valid <= 1'b1;
    display_name <= "UNSIGNED_CMP";
-   display_value <= (In1 < In2) ? 32'd1 : 32'd0;
- end
- 6'd11 :
- begin
+   F <= 3'd8; // 设置ALU的操作码为无符号比较
+   display_value <= Out; // 使用ALU的输出结果
+end
+6'd11 :
+begin
    display_valid <= 1'b1;
    display_name <= "MUL";
-   display_value <= In1 * In2;
- end
- 6'd12 :
- begin
+   F <= 3'd10; // 设置ALU的操作码为乘法
+   display_value <= Out; // 使用ALU的输出结果
+end
+6'd12 :
+begin
    display_valid <= 1'b1;
    display_name <= "DIV";
-   display_value <= In1 / In2;
- end
- default :
- begin
-   display_valid <= 1'b0;
-   display_name <= 40'd0;
-   display_value <= 32'd0;
+   F <= 3'd11; // 设置ALU的操作码为除法
+   display_value <= Out; // 使用ALU的输出结果
 end
 endcase
 end

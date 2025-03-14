@@ -3,10 +3,10 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Fri Mar 14 21:13:57 2025
-# Process ID         : 3692
+# Start of session at: Fri Mar 14 19:55:39 2025
+# Process ID         : 19056
 # Current directory  : C:/Users/91629/Desktop/alu_homework-1/32bit_ALU
-# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent21084 C:\Users\91629\Desktop\alu_homework-1\32bit_ALU\32bit_ALU.xpr
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent12716 C:\Users\91629\Desktop\alu_homework-1\32bit_ALU\32bit_ALU.xpr
 # Log file           : C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/vivado.log
 # Journal file       : C:/Users/91629/Desktop/alu_homework-1/32bit_ALU\vivado.jou
 # Running On         : wangzhangzhuo
@@ -17,20 +17,18 @@
 # CPU Physical cores : 8
 # CPU Logical cores  : 16
 # Host memory        : 16334 MB
-# Swap memory        : 13993 MB
-# Total Virtual      : 30328 MB
-# Available Virtual  : 5473 MB
+# Swap memory        : 10200 MB
+# Total Virtual      : 26535 MB
+# Available Virtual  : 5628 MB
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.xpr
-launch_simulation
-add_files -norecurse {C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/Divider_32bit.v C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/BoothMul_32bit.v}
-launch_simulation -mode post-synthesis -type functional
-launch_simulation
-source test_alu.tcl
-close_sim
-launch_simulation
-launch_simulation
-launch_simulation
-launch_simulation
-source test_alu.tcl
+INFO: [Project 1-313] Project file moved from 'C:/Users/91629/Desktop/32bit_ALU' since last save.
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2024.2/data/ip'.
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 14 20:15:23 2025...

@@ -20,8 +20,8 @@ module ALU_32bit (
   output [31:0] S;  ///输出
   output CO;
   ////译码器a
-  wire [16:0] y;  ////3输入八输出判断功能
-  Decoder_3To8 d1 (
+  wire [15:0] y;  ////3输入八输出判断功能
+  Decoder_4To16 d1 (
       .a(F),
       .y(y)
   );

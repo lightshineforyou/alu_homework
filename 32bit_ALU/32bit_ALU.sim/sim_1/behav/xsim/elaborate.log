@@ -7,8 +7,6 @@ Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/Subtractor_32bit.v" Line 1. Module Subtractor_32bit doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/Subtractor_32bit.v" Line 1. Module Subtractor_32bit doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.Decoder_4To16

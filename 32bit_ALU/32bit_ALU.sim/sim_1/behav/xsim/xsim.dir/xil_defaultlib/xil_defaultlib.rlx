@@ -4,7 +4,7 @@ Nov  8 2024
 22:36:57
 E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim/glbl.v,1742020356,verilog,,,,glbl,,,,,,,,
 E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sim_1/new/testbench_ALU_32bit.v,1742020570,verilog,,,,test_alu,,,,,,,,
-E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALUModule.v,1742020516,verilog,,E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/AdderModule.v,,ALU_32bit,,,,,,,,
+E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALUModule.v,1742021614,verilog,,E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/AdderModule.v,,ALU_32bit,,,,,,,,
 E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v,1742020356,verilog,,E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/Divider_32bit.v,,ALU_Display,,,,,,,,
 E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/AdderModule.v,1742020356,verilog,,E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/NotModule.v,,Add_1bit;CLA_4bit;CLA_Add_16bit;CLA_Add_32bit;CLA_Add_4bit,,,,,,,,
 E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/AndModule.v,1742020356,verilog,,E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/TruncateModule.v,,And_32bit,,,,,,,,

@@ -3,515 +3,148 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Fri Mar 14 21:13:57 2025
-# Process ID         : 3692
-# Current directory  : C:/Users/91629/Desktop/alu_homework-1/32bit_ALU
-# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent21084 C:\Users\91629\Desktop\alu_homework-1\32bit_ALU\32bit_ALU.xpr
-# Log file           : C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/vivado.log
-# Journal file       : C:/Users/91629/Desktop/alu_homework-1/32bit_ALU\vivado.jou
-# Running On         : wangzhangzhuo
+# Start of session at: Sat Mar 15 14:36:27 2025
+# Process ID         : 4468
+# Current directory  : E:/Learing Doc/github/alu_homework2/32bit_ALU
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent7976 E:\Learing Doc\github\alu_homework2\32bit_ALU\32bit_ALU.xpr
+# Log file           : E:/Learing Doc/github/alu_homework2/32bit_ALU/vivado.log
+# Journal file       : E:/Learing Doc/github/alu_homework2/32bit_ALU\vivado.jou
+# Running On         : LAPTOP-B446I18T
 # Platform           : Windows Server 2016 or Windows 10
-# Operating System   : 22631
-# Processor Detail   : AMD Ryzen 7 7840H w/Radeon 780M Graphics
-# CPU Frequency      : 3793 MHz
-# CPU Physical cores : 8
-# CPU Logical cores  : 16
-# Host memory        : 16334 MB
-# Swap memory        : 13993 MB
-# Total Virtual      : 30328 MB
-# Available Virtual  : 5473 MB
+# Operating System   : 26100
+# Processor Detail   : 12th Gen Intel(R) Core(TM) i9-12900H
+# CPU Frequency      : 2918 MHz
+# CPU Physical cores : 14
+# CPU Logical cores  : 20
+# Host memory        : 16890 MB
+# Swap memory        : 10737 MB
+# Total Virtual      : 27628 MB
+# Available Virtual  : 9704 MB
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.xpr
-INFO: [Project 1-313] Project file moved from 'C:/Users/91629/Desktop/32bit_ALU' since last save.
-INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.gen/sources_1'.
+open_project {E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.xpr}
+INFO: [Project 1-313] Project file moved from 'C:/Users/91629/Desktop/alu_homework-1/32bit_ALU' since last save.
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.gen/sources_1'.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2024.2/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2024.2/data/ip'.
 launch_simulation
 Command: launch_simulation 
 INFO: [Vivado 12-12493] Simulation top is 'test_alu'
 WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from 'D:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-72] Using boost library from 'E:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
 INFO: [SIM-utils-54] Inspecting design source files for 'test_alu' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
 INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim'
 "xvlog --incr --relax -prj test_alu_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/DecoderModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Decoder_3To8
-INFO: [VRFC 10-311] analyzing module Decoder_2To4
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ShiftModule.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/DecoderModule.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Decoder_4To16
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/ShiftModule.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module shifter_1bit
 INFO: [VRFC 10-311] analyzing module shifter_2bit
 INFO: [VRFC 10-311] analyzing module shifter_4bit
 INFO: [VRFC 10-311] analyzing module shifter_8bit
 INFO: [VRFC 10-311] analyzing module shifter_16bit
 INFO: [VRFC 10-311] analyzing module shifter_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALUModule.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALUModule.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ALU_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/AdderModule.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/AdderModule.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Add_1bit
 INFO: [VRFC 10-311] analyzing module CLA_4bit
 INFO: [VRFC 10-311] analyzing module CLA_Add_4bit
 INFO: [VRFC 10-311] analyzing module CLA_Add_16bit
 INFO: [VRFC 10-311] analyzing module CLA_Add_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/NotModule.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/NotModule.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Not_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/OrModule.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/OrModule.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Or_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/XorModule.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/XorModule.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Xor_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/AndModule.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/AndModule.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module And_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/TruncateModule.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/TruncateModule.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Cut_decoder
-WARNING: [VRFC 10-9336] redeclaration of ANSI port 'judge' is not allowed [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/TruncateModule.v:16]
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'judge' is not allowed [E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/TruncateModule.v:16]
 INFO: [VRFC 10-311] analyzing module CutL
 INFO: [VRFC 10-311] analyzing module CutR
 INFO: [VRFC 10-311] analyzing module Truncate_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ALU_Display
-WARNING: [VRFC 10-8497] literal value 'd9 truncated to fit in 3 bits [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v:218]
-WARNING: [VRFC 10-8497] literal value 'd8 truncated to fit in 3 bits [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v:225]
-WARNING: [VRFC 10-8497] literal value 'd10 truncated to fit in 3 bits [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v:232]
-WARNING: [VRFC 10-8497] literal value 'd11 truncated to fit in 3 bits [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v:239]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sim_1/new/testbench_ALU_32bit.v" into library xil_defaultlib
+WARNING: [VRFC 10-8497] literal value 'd9 truncated to fit in 3 bits [E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v:218]
+WARNING: [VRFC 10-8497] literal value 'd8 truncated to fit in 3 bits [E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v:225]
+WARNING: [VRFC 10-8497] literal value 'd10 truncated to fit in 3 bits [E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v:232]
+WARNING: [VRFC 10-8497] literal value 'd11 truncated to fit in 3 bits [E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v:239]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/Divider_32bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Divider_32bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/BoothMul_32bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BoothMul_32bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sim_1/new/testbench_ALU_32bit.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module test_alu
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim'
 "xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_alu_behav xil_defaultlib.test_alu xil_defaultlib.glbl -log elaborate.log"
 Vivado Simulator v2024.2.0
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: D:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_alu_behav xil_defaultlib.test_alu xil_defaultlib.glbl -log elaborate.log 
+Running: E:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_alu_behav xil_defaultlib.test_alu xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-ERROR: [VRFC 10-2063] Module <BoothMul_32bit> not found while processing module instance <booth_mul> [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALUModule.v:430]
-ERROR: [VRFC 10-2063] Module <Divider_32bit> not found while processing module instance <divider_inst> [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALUModule.v:471]
+ERROR: [VRFC 10-2063] Module <Subtractor_32bit> not found while processing module instance <sub1> [E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALUModule.v:513]
 ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-99] Step results log file:'C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim/elaborate.log'
-ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim/elaborate.log' file for more information.
 ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1226.867 ; gain = 0.000
 ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-add_files -norecurse {C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/Divider_32bit.v C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/BoothMul_32bit.v}
-launch_simulation -mode post-synthesis -type functional
-Command: launch_simulation  -mode post-synthesis -type functional
-INFO: [Vivado 12-12493] Simulation top is 'test_alu'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-INFO: [Vivado 12-5682] Launching post-synthesis functional simulation in 'C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.sim/sim_1/synth/func/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from 'D:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
-Design is defaulting to impl run constrset: constrs_1
-Design is defaulting to synth run part: xc7a200tfbg676-2
-INFO: [Device 21-403] Loading part xc7a200tfbg676-2
-INFO: [Common 17-41] Interrupt caught. Command should exit soon.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1457.320 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 305 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-WARNING: [Netlist 29-101] Netlist 'ALU_Display' is not ideal for floorplanning, since the cellview 'ALU_Display' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
-INFO: [Project 1-479] Netlist was created with Vivado 2024.2
-INFO: [Common 17-344] 'open_run' was cancelled
-INFO: [Vivado 12-5357] 'setup' step aborted
-INFO: [Common 17-344] 'launch_simulation' was cancelled
+add_files -norecurse {{E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/Subtractor_32bit.v}}
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\Learing Doc\github\alu_homework2\32bit_ALU\32bit_ALU.srcs\sources_1\new\ALU_32bit_Display.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\Learing Doc\github\alu_homework2\32bit_ALU\32bit_ALU.srcs\sources_1\new\ALUModule.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\Learing Doc\github\alu_homework2\32bit_ALU\32bit_ALU.srcs\sources_1\new\ALUModule.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [E:\Learing Doc\github\alu_homework2\32bit_ALU\32bit_ALU.srcs\sources_1\new\ALUModule.v:]
+ERROR: [Common 17-180] Spawn failed: No error
 launch_simulation
 Command: launch_simulation 
 INFO: [Vivado 12-12493] Simulation top is 'test_alu'
 WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from 'D:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-72] Using boost library from 'E:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
 INFO: [SIM-utils-54] Inspecting design source files for 'test_alu' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
 INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim'
 "xvlog --incr --relax -prj test_alu_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/DecoderModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Decoder_3To8
-INFO: [VRFC 10-311] analyzing module Decoder_2To4
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ShiftModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module shifter_1bit
-INFO: [VRFC 10-311] analyzing module shifter_2bit
-INFO: [VRFC 10-311] analyzing module shifter_4bit
-INFO: [VRFC 10-311] analyzing module shifter_8bit
-INFO: [VRFC 10-311] analyzing module shifter_16bit
-INFO: [VRFC 10-311] analyzing module shifter_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALUModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/AdderModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Add_1bit
-INFO: [VRFC 10-311] analyzing module CLA_4bit
-INFO: [VRFC 10-311] analyzing module CLA_Add_4bit
-INFO: [VRFC 10-311] analyzing module CLA_Add_16bit
-INFO: [VRFC 10-311] analyzing module CLA_Add_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/NotModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Not_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/OrModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Or_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/XorModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Xor_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/AndModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module And_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/TruncateModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Cut_decoder
-WARNING: [VRFC 10-9336] redeclaration of ANSI port 'judge' is not allowed [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/TruncateModule.v:16]
-INFO: [VRFC 10-311] analyzing module CutL
-INFO: [VRFC 10-311] analyzing module CutR
-INFO: [VRFC 10-311] analyzing module Truncate_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_Display
-WARNING: [VRFC 10-8497] literal value 'd9 truncated to fit in 3 bits [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v:218]
-WARNING: [VRFC 10-8497] literal value 'd8 truncated to fit in 3 bits [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v:225]
-WARNING: [VRFC 10-8497] literal value 'd10 truncated to fit in 3 bits [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v:232]
-WARNING: [VRFC 10-8497] literal value 'd11 truncated to fit in 3 bits [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v:239]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/Divider_32bit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Divider_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/BoothMul_32bit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module BoothMul_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sim_1/new/testbench_ALU_32bit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module test_alu
-INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/Subtractor_32bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Subtractor_32bit
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim'
 "xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_alu_behav xil_defaultlib.test_alu xil_defaultlib.glbl -log elaborate.log"
 Vivado Simulator v2024.2.0
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: D:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_alu_behav xil_defaultlib.test_alu xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 4 differs from formal bit length 3 for port 'a' [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALUModule.v:25]
-WARNING: [VRFC 10-3091] actual bit length 17 differs from formal bit length 8 for port 'y' [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALUModule.v:26]
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.Decoder_3To8
-Compiling module xil_defaultlib.Add_1bit
-Compiling module xil_defaultlib.CLA_4bit
-Compiling module xil_defaultlib.CLA_Add_4bit
-Compiling module xil_defaultlib.CLA_Add_16bit
-Compiling module xil_defaultlib.CLA_Add_32bit
-Compiling module xil_defaultlib.Decoder_2To4
-Compiling module xil_defaultlib.shifter_1bit
-Compiling module xil_defaultlib.shifter_2bit
-Compiling module xil_defaultlib.shifter_4bit
-Compiling module xil_defaultlib.shifter_8bit
-Compiling module xil_defaultlib.shifter_16bit
-Compiling module xil_defaultlib.shifter_32bit
-Compiling module xil_defaultlib.Cut_decoder
-Compiling module xil_defaultlib.CutL
-Compiling module xil_defaultlib.CutR
-Compiling module xil_defaultlib.Truncate_32bit
-Compiling module xil_defaultlib.And_32bit
-Compiling module xil_defaultlib.Or_32bit
-Compiling module xil_defaultlib.Not_32bit
-Compiling module xil_defaultlib.Xor_32bit
-Compiling module xil_defaultlib.BoothMul_32bit
-Compiling module xil_defaultlib.Divider_32bit
-Compiling module xil_defaultlib.ALU_32bit
-Compiling module xil_defaultlib.test_alu
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot test_alu_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "test_alu_behav -key {Behavioral:sim_1:Functional:test_alu} -tclbatch {test_alu.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-source test_alu.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_alu_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 1495.270 ; gain = 37.949
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'test_alu'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from 'D:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'test_alu' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj test_alu_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/DecoderModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Decoder_4To16
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ShiftModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module shifter_1bit
-INFO: [VRFC 10-311] analyzing module shifter_2bit
-INFO: [VRFC 10-311] analyzing module shifter_4bit
-INFO: [VRFC 10-311] analyzing module shifter_8bit
-INFO: [VRFC 10-311] analyzing module shifter_16bit
-INFO: [VRFC 10-311] analyzing module shifter_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALUModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/AdderModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Add_1bit
-INFO: [VRFC 10-311] analyzing module CLA_4bit
-INFO: [VRFC 10-311] analyzing module CLA_Add_4bit
-INFO: [VRFC 10-311] analyzing module CLA_Add_16bit
-INFO: [VRFC 10-311] analyzing module CLA_Add_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/NotModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Not_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/OrModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Or_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/XorModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Xor_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/AndModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module And_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/TruncateModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Cut_decoder
-WARNING: [VRFC 10-9336] redeclaration of ANSI port 'judge' is not allowed [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/TruncateModule.v:16]
-INFO: [VRFC 10-311] analyzing module CutL
-INFO: [VRFC 10-311] analyzing module CutR
-INFO: [VRFC 10-311] analyzing module Truncate_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_Display
-WARNING: [VRFC 10-8497] literal value 'd9 truncated to fit in 3 bits [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v:218]
-WARNING: [VRFC 10-8497] literal value 'd8 truncated to fit in 3 bits [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v:225]
-WARNING: [VRFC 10-8497] literal value 'd10 truncated to fit in 3 bits [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v:232]
-WARNING: [VRFC 10-8497] literal value 'd11 truncated to fit in 3 bits [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v:239]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/Divider_32bit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Divider_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/BoothMul_32bit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module BoothMul_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sim_1/new/testbench_ALU_32bit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module test_alu
-ERROR: [VRFC 10-5010] illegal character '7' in binary number 4'b0117 [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sim_1/new/testbench_ALU_32bit.v:90]
-ERROR: [VRFC 10-8530] module 'test_alu' is ignored due to previous errors [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sim_1/new/testbench_ALU_32bit.v:3]
-INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
-INFO: [USF-XSim-99] Step results log file:'C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim/xvlog.log'
-ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim/xvlog.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'test_alu'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from 'D:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'test_alu' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj test_alu_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/DecoderModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Decoder_4To16
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ShiftModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module shifter_1bit
-INFO: [VRFC 10-311] analyzing module shifter_2bit
-INFO: [VRFC 10-311] analyzing module shifter_4bit
-INFO: [VRFC 10-311] analyzing module shifter_8bit
-INFO: [VRFC 10-311] analyzing module shifter_16bit
-INFO: [VRFC 10-311] analyzing module shifter_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALUModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/AdderModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Add_1bit
-INFO: [VRFC 10-311] analyzing module CLA_4bit
-INFO: [VRFC 10-311] analyzing module CLA_Add_4bit
-INFO: [VRFC 10-311] analyzing module CLA_Add_16bit
-INFO: [VRFC 10-311] analyzing module CLA_Add_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/NotModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Not_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/OrModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Or_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/XorModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Xor_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/AndModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module And_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/TruncateModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Cut_decoder
-WARNING: [VRFC 10-9336] redeclaration of ANSI port 'judge' is not allowed [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/TruncateModule.v:16]
-INFO: [VRFC 10-311] analyzing module CutL
-INFO: [VRFC 10-311] analyzing module CutR
-INFO: [VRFC 10-311] analyzing module Truncate_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_Display
-WARNING: [VRFC 10-8497] literal value 'd9 truncated to fit in 3 bits [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v:218]
-WARNING: [VRFC 10-8497] literal value 'd8 truncated to fit in 3 bits [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v:225]
-WARNING: [VRFC 10-8497] literal value 'd10 truncated to fit in 3 bits [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v:232]
-WARNING: [VRFC 10-8497] literal value 'd11 truncated to fit in 3 bits [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v:239]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/Divider_32bit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Divider_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/BoothMul_32bit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module BoothMul_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sim_1/new/testbench_ALU_32bit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module test_alu
-ERROR: [VRFC 10-5010] illegal character '7' in binary number 4'b0117 [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sim_1/new/testbench_ALU_32bit.v:90]
-ERROR: [VRFC 10-8530] module 'test_alu' is ignored due to previous errors [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sim_1/new/testbench_ALU_32bit.v:3]
-INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
-INFO: [USF-XSim-99] Step results log file:'C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim/xvlog.log'
-ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim/xvlog.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'test_alu'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from 'D:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'test_alu' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj test_alu_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/DecoderModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Decoder_4To16
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ShiftModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module shifter_1bit
-INFO: [VRFC 10-311] analyzing module shifter_2bit
-INFO: [VRFC 10-311] analyzing module shifter_4bit
-INFO: [VRFC 10-311] analyzing module shifter_8bit
-INFO: [VRFC 10-311] analyzing module shifter_16bit
-INFO: [VRFC 10-311] analyzing module shifter_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALUModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/AdderModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Add_1bit
-INFO: [VRFC 10-311] analyzing module CLA_4bit
-INFO: [VRFC 10-311] analyzing module CLA_Add_4bit
-INFO: [VRFC 10-311] analyzing module CLA_Add_16bit
-INFO: [VRFC 10-311] analyzing module CLA_Add_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/NotModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Not_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/OrModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Or_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/XorModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Xor_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/AndModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module And_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/TruncateModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Cut_decoder
-WARNING: [VRFC 10-9336] redeclaration of ANSI port 'judge' is not allowed [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/TruncateModule.v:16]
-INFO: [VRFC 10-311] analyzing module CutL
-INFO: [VRFC 10-311] analyzing module CutR
-INFO: [VRFC 10-311] analyzing module Truncate_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_Display
-WARNING: [VRFC 10-8497] literal value 'd9 truncated to fit in 3 bits [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v:218]
-WARNING: [VRFC 10-8497] literal value 'd8 truncated to fit in 3 bits [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v:225]
-WARNING: [VRFC 10-8497] literal value 'd10 truncated to fit in 3 bits [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v:232]
-WARNING: [VRFC 10-8497] literal value 'd11 truncated to fit in 3 bits [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v:239]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/Divider_32bit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Divider_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/BoothMul_32bit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module BoothMul_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sim_1/new/testbench_ALU_32bit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module test_alu
-ERROR: [VRFC 10-5010] illegal character '7' in binary number 4'b0117 [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sim_1/new/testbench_ALU_32bit.v:89]
-ERROR: [VRFC 10-8530] module 'test_alu' is ignored due to previous errors [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sim_1/new/testbench_ALU_32bit.v:3]
-INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
-INFO: [USF-XSim-99] Step results log file:'C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim/xvlog.log'
-ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim/xvlog.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'test_alu'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from 'D:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'test_alu' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj test_alu_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/DecoderModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Decoder_4To16
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ShiftModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module shifter_1bit
-INFO: [VRFC 10-311] analyzing module shifter_2bit
-INFO: [VRFC 10-311] analyzing module shifter_4bit
-INFO: [VRFC 10-311] analyzing module shifter_8bit
-INFO: [VRFC 10-311] analyzing module shifter_16bit
-INFO: [VRFC 10-311] analyzing module shifter_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALUModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/AdderModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Add_1bit
-INFO: [VRFC 10-311] analyzing module CLA_4bit
-INFO: [VRFC 10-311] analyzing module CLA_Add_4bit
-INFO: [VRFC 10-311] analyzing module CLA_Add_16bit
-INFO: [VRFC 10-311] analyzing module CLA_Add_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/NotModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Not_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/OrModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Or_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/XorModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Xor_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/AndModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module And_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/TruncateModule.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Cut_decoder
-WARNING: [VRFC 10-9336] redeclaration of ANSI port 'judge' is not allowed [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/TruncateModule.v:16]
-INFO: [VRFC 10-311] analyzing module CutL
-INFO: [VRFC 10-311] analyzing module CutR
-INFO: [VRFC 10-311] analyzing module Truncate_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_Display
-WARNING: [VRFC 10-8497] literal value 'd9 truncated to fit in 3 bits [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v:218]
-WARNING: [VRFC 10-8497] literal value 'd8 truncated to fit in 3 bits [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v:225]
-WARNING: [VRFC 10-8497] literal value 'd10 truncated to fit in 3 bits [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v:232]
-WARNING: [VRFC 10-8497] literal value 'd11 truncated to fit in 3 bits [C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v:239]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/Divider_32bit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Divider_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sources_1/new/BoothMul_32bit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module BoothMul_32bit
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sim_1/new/testbench_ALU_32bit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module test_alu
-INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_alu_behav xil_defaultlib.test_alu xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator v2024.2.0
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: D:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_alu_behav xil_defaultlib.test_alu xil_defaultlib.glbl -log elaborate.log 
+Running: E:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_alu_behav xil_defaultlib.test_alu xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
 Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/Subtractor_32bit.v" Line 1. Module Subtractor_32bit doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sources_1/new/Subtractor_32bit.v" Line 1. Module Subtractor_32bit doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.Decoder_4To16
@@ -537,13 +170,15 @@ Compiling module xil_defaultlib.Not_32bit
 Compiling module xil_defaultlib.Xor_32bit
 Compiling module xil_defaultlib.BoothMul_32bit
 Compiling module xil_defaultlib.Divider_32bit
+Compiling module xil_defaultlib.Subtractor_32bit
 Compiling module xil_defaultlib.ALU_32bit
 Compiling module xil_defaultlib.test_alu
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot test_alu_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1226.867 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
    with args "test_alu_behav -key {Behavioral:sim_1:Functional:test_alu} -tclbatch {test_alu.tcl} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
@@ -571,10 +206,10 @@ F=1000: S=00000000000000000000000000000000 (Expected: 32'b1 if a < b)
 F=1001: S=00000000000000000000000000000001 (Expected: 32'b1 if a < b)
 F=1010: S=        12 (Expected: 12)
 F=1011: S=         4 (Expected: 4)
-F=1100: S=00000000000000000000000000000000 (Undefined behavior)
+F=1100: S=        10 (Expected: 10)
 F=1111: S=00000000000000000000000000000000 (Undefined behavior)
 Simulation finished.
-$finish called at time : 280 ns : File "C:/Users/91629/Desktop/alu_homework-1/32bit_ALU/32bit_ALU.srcs/sim_1/new/testbench_ALU_32bit.v" Line 152
+$finish called at time : 280 ns : File "E:/Learing Doc/github/alu_homework2/32bit_ALU/32bit_ALU.srcs/sim_1/new/testbench_ALU_32bit.v" Line 153
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_alu_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 2524.574 ; gain = 0.000
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 1272.398 ; gain = 45.531

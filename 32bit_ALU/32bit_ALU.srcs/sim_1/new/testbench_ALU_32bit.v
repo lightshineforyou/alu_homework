@@ -132,14 +132,15 @@ module test_alu();
         #10;
         $display("F=1011: S=%d (Expected: 4)", S);
 
-        // 测试功能码 F=1100 到 F=1111（保留功能，未定义）
+        // 测试功能码 F=1100：减法
         #10;
         F = 4'b1100;
-        a = 32'd0;
-        b = 32'd0;
+        a = 32'd20;
+        b = 32'd10;
         #10;
-        $display("F=1100: S=%b (Undefined behavior)", S);
-
+        $display("F=1100: S=%d (Expected: 10)", S);
+        
+        // 测试功能码 F=1111：保留功能，未定义
         #10;
         F = 4'b1111;
         a = 32'd0;

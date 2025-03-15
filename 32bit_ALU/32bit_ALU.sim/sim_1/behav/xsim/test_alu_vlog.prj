@@ -12,6 +12,7 @@ verilog xil_defaultlib  \
 "../../../../32bit_ALU.srcs/sources_1/new/ALU_32bit_Display.v" \
 "../../../../32bit_ALU.srcs/sources_1/new/Divider_32bit.v" \
 "../../../../32bit_ALU.srcs/sources_1/new/BoothMul_32bit.v" \
+"../../../../32bit_ALU.srcs/sources_1/new/Subtractor_32bit.v" \
 "../../../../32bit_ALU.srcs/sim_1/new/testbench_ALU_32bit.v" \
 
 # compile glbl module
